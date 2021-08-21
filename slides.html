@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Shiny</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="William Amorim | Curso-R" />
+    <script src="libs/header-attrs-2.9/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Shiny
+### William Amorim | Curso-R
+### Agosto de 2021
+
+---
+
+
+
+
+## Sobre mim
+
+&lt;center&gt;
+&lt;div class = "sobre-mim"&gt;
+  &lt;div style = "margin-bottom: 80px;"&gt;
+    &lt;img src = "img/ime.png" width = "150px"&gt;
+    &lt;img src = "img/cursor.png" width = "240px" class = "margem"&gt;
+    &lt;img src = "img/hex-shiny.png" width = "150px"&gt;
+  &lt;/div&gt;
+    &lt;span&gt;
+      &lt;i class="fab fa-twitter"&gt;&lt;/i&gt;
+      &lt;a href = "https://twitter.com/wamorim_"&gt;@wamorim_&lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+
+---
+## Sobre a Curso-R
+
+.pull-left[
+<h3>Livros</h3><a href="https://livro.curso-r.com/" target="_blank">
+<img src="img/hex-livro.png" width="100px"/>
+</a><a href="https://curso-r.github.io/zen-do-r/index.html" target="_blank">
+<img src="img/zen-do-r.png" width="100px" style="margin-left: 20px;"/>
+</a>
+
+&lt;br&gt;
+
+<h3>Blog</h3><a href="https://blog.curso-r.com/" target="_blank">
+<img src="img/blog.png" width="400px"/>
+</a>
+
+]
+
+.pull-right[
+<h3>Material dos cursos</h3><a href="https://github.com/curso-r" target="_blank">
+<img src="img/github.png" width="230px"/>
+</a>
+
+&lt;br&gt;
+
+<h3>Lives</h3><a href="https://www.youtube.com/c/CursoR6" target="_blank">
+<img src="img/youtube.png" width="200px"/>
+</a>
+
+]
+
+&lt;br&gt;
+
+.center[
+### [www.curso-r.com](https://www.curso-r.com)
+]
+
+---
+class: center, middle
+## O que é o Shiny?
+
+### <span style="color:#6495ed; font-weight: bold;">Shiny é um framework em linguagem R para a criação de aplicativos web.</span>
+
+&lt;div style = "height: 60px"&gt;
+
+--
+
+**framework**: conceitos + ferramentas
+
+--
+&lt;br&gt;
+
+**aplicativos web**: uma página na internet, uma aplicação, um código
+
+---
+class: center
+## Conceito
+
+#### Programar em HTML sem saber HTML
+
+&lt;br&gt;
+&lt;br&gt;
+
+## Ferramentas
+
+&lt;img src = "img/R.png" width = "25%"&gt;
+&lt;img src = "img/rstudio.png" width = "22%" class = "margem"&gt;
+&lt;img src = "img/hex-shiny.png" width = "20%"&gt;
+
+
+---
+class: center, middle
+
+## [Exemplo de Shiny app](https://cursodashboards.shinyapps.io/penguins-dispersao/)
+
+---
+## Componentes básicos
+
+Um aplicativo Shiny tem dois componentes básicos: a **UI** e o **servidor**.
+
+--
+
+- **UI**: o que a pessoa que está usando o app vê.
+
+&lt;img src="img/app_penguins_disp.png" width="1685" style="display: block; margin: auto;" /&gt;
+
+--
+
+- **servidor**: o que está acontecendo por trás das cortinas, no servidor.
+
+Precisamos apenas adaptar como esse código recebe informação da UI (*inputs*) e devolve os resultados (*outputs*).
+
+---
+class: center
+## Juntando tudo...
+
+&lt;img src="img/esquema_ui_servidor.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+## Em resumo
+
+-  Você pode usar o Shiny para construir sites, aplicativos e dashboards interativos, tudo na Web (ou em uma rede local).
+
+- Você sempre vai precisar de um servidor para hospedar o seu aplicativo Shiny.
+
+- Você faz tudo isso sem sair do R.
+
+---
+
+## Mas cuidado
+
+#### Como em tudo na Estatística (e na vida), precisamos ter análise crítica.
+
+Antes de começar a fazer um Shiny app, pensar
+
+- Eu realmente preciso fazer um aplicativo? Um relatório ou uma apresentação não seria suficiente?
+
+
+- Quem vai usar o app? Em qual nível eu quero comunicar os meus resultados?
+
+
+- Como eu vou hospedar esse aplicativo? Quantas pessoas vão usar?
+
+
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "4:3"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
