@@ -1,5 +1,6 @@
 ---
-title: "Shiny"
+title: "Shiny."
+subtitle: "Apresentação CEA"
 author: "William Amorim | Curso-R"
 date: "`r paste(lubridate::month(Sys.Date(), label = TRUE, abbr = FALSE, locale = 'pt_BR.UTF-8'), 'de', lubridate::year(Sys.Date()))`"
 output:
@@ -209,15 +210,4 @@ Antes de começar a fazer um Shiny app, pensar
 
 
 - Como eu vou hospedar esse aplicativo? Quantas pessoas vão usar?
-
-
-
-
-
-
-
-
-
-
-
 
